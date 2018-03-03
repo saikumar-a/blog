@@ -14,7 +14,7 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: "Lore Pirri"
+author: ""
 image: /thumbnail-jumbo.png
 twitter:
   username: lorepirri
