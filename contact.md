@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-tagline: Create a contact form and you are good to go
+tagline: Do you wanna reach me.
 ---
 
 Contact me by providing comments in this blog.
