@@ -17,13 +17,17 @@ layout: default
 
   <div itemprop="articleBody">
     {{ content }}
-    <script src="https://utteranc.es/client.js"
-        repo="https://github.com/saikumar-a/comments"
-        branch="master"
-        issue-term="pathname"
-        async>
-</script>
   </div>
 
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% else %}
+  	<script src="https://utteranc.es/client.js"
+        repo="https://github.com/saikumar-a/comments"
+        branch="master"
+        issue-term="title"
+        async>
+</script>
+{% endif %}
   
 </article>
