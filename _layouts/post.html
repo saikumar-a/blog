@@ -19,7 +19,10 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
+  <script src="https://utteranc.es/client.js"
+        repo="https://github.com/saikumar-a/comments"
+        branch="master"
+        issue-term="pathname"
+        async>
+</script>
 </article>
