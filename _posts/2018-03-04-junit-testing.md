@@ -15,6 +15,7 @@ It follows like this.
 2.  Call the actual method with source object  which returns target object.
 3.  Get the expected target object from json file.
 4.  Now compare actual and expected target objects with Assertj function.
+
 ```java
 //Step 1
 ObjectMapper mapper = new ObjectMapper(); 
@@ -28,5 +29,4 @@ ObjectMapper mapper2 = new ObjectMapper();
 Target targetExpected = mapper2.readValue(new File("./src/test/resources/target.json"), Target.class);
 //Step 4
 Assertions.assertThat(target).isEqualToComparingFieldByFieldRecursively(targetExpected);//compares each value in objects
-
 ```
