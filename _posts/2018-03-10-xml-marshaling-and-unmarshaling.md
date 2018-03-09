@@ -3,7 +3,7 @@ layout: post
 ---
 At the time of testing you may required to convert XML string to POJO and vice versa.<br>
 After so many searches, only the below way worked for me for XML marshaling and unmarshaling without root element.
-<br><br>
+<br>
 ```java
 //marshal
 JAXBContext jaxbContext = JAXBContext.newInstance(Source.class);//JAXB library
@@ -12,6 +12,7 @@ jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 ObjectFactory factory=new ObjectFactory();//Generated class from XSD/WSDL file
 JAXBElement<Source> jaxbElement=factory.createSource(sourceObj);        
 jaxbMarshaller.marshal(jaxbElement, System.out);
+
 //unmarshal
 JAXBContext jaxbContext = JAXBContext.newInstance(Source.class);
 XMLStreamReader xmlStreamReader=XMLInputFactory.newInstance().createXMLStreamReader(new FileReader("./src/test/resources/source.xml"));
