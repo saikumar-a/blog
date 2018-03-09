@@ -1,6 +1,7 @@
 ---
 layout: post
 ---
+At the time of testing you may required to convert XML string to POJO and vice versa.<br>
 After so many searches, only the below way worked for me for XML marshaling and unmarshaling without root element.
 <br><br>
 ```java
