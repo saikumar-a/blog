@@ -8,7 +8,7 @@ Before to that, let see the way of printing json from POJO.
 ObjectMapper mapper = new ObjectMapper(); //Jackson library 
 mapper.setSerializationInclusion(Include.NON_EMPTY); //optional
 mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));//optional
-System.out.println(mapper.writeValueAsString(source));//Now copy the string from console and save it as source.json
+System.out.println(mapper.writeValueAsString(sourceObj));//Now copy the string from console and save it as source.json
 ```
 It follows like this.
 1.  Get the source object from json file.
@@ -20,15 +20,15 @@ It follows like this.
 //Step 1
 ObjectMapper mapper = new ObjectMapper(); 
 mapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE); // This is optional
-Source source = mapper.readValue(new File("./src/test/resources/source.json"), Source.class);
+Source sourceObj = mapper.readValue(new File("./src/test/resources/source.json"), Source.class);
 //Step 2
 Mappings mapper=new Mappings();
-Target target=mapper.map(source);
+Target targetObj=mapper.map(sourceObj);
 //Step 3
 ObjectMapper mapper2 = new ObjectMapper();
-Target targetExpected = mapper2.readValue(new File("./src/test/resources/target.json"), Target.class);
+Target targetObjExpected = mapper2.readValue(new File("./src/test/resources/target.json"), Target.class);
 //Step 4
-Assertions.assertThat(target).isEqualToComparingFieldByFieldRecursively(targetExpected);//compares each value in objects
+Assertions.assertThat(targetObj).isEqualToComparingFieldByFieldRecursively(targetObjExpected);//compares each value in objects
 ```
 If you want to ignore  some of the auto generated fields, you can do it by the following way
 ```java
