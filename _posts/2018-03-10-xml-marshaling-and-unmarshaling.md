@@ -2,6 +2,7 @@
 layout: post
 ---
 After so many searches, only the below way worked for me for XML marshaling and unmarshaling without root element.
+<br>
 ```java
 //marshal
 JAXBContext jaxbContext = JAXBContext.newInstance(Source.class);//JAXB library
