@@ -10,7 +10,6 @@ jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 ObjectFactory factory=new ObjectFactory();//Generated class from XSD/WSDL file
 JAXBElement<Source> jaxbElement=factory.createSource(sourceObj);        
 jaxbMarshaller.marshal(jaxbElement, System.out);
-
 //unmarshal
 JAXBContext jaxbContext = JAXBContext.newInstance(Source.class);
 XMLStreamReader xmlStreamReader=XMLInputFactory.newInstance().createXMLStreamReader(new FileReader("./src/test/resources/source.xml"));
