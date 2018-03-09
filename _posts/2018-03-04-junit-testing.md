@@ -32,5 +32,5 @@ Assertions.assertThat(targetObj).isEqualToComparingFieldByFieldRecursively(targe
 ```
 If you want to ignore  some of the auto generated fields, you can do it by the following way
 ```java
-Assertions.assertThat(target).usingComparatorForFields((a,b)->0, "student.StudentName","field2").isEqualToComparingFieldByFieldRecursively(targetExpected);
+Assertions.assertThat(targetObj).usingComparatorForFields((a,b)->0, "student.StudentName","field2").isEqualToComparingFieldByFieldRecursively(targetObjExpected);
 ```
