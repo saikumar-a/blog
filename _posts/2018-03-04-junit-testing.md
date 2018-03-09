@@ -30,3 +30,7 @@ Target targetExpected = mapper2.readValue(new File("./src/test/resources/target.
 //Step 4
 Assertions.assertThat(target).isEqualToComparingFieldByFieldRecursively(targetExpected);//compares each value in objects
 ```
+If you want to ignore  some of the auto generated fields, you can do it by the following way
+```java
+Assertions.assertThat(target).usingComparatorForFields((a,b)->0, "student.StudentName","field2").isEqualToComparingFieldByFieldRecursively(targetExpected);
+```
